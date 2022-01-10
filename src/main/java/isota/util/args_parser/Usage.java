@@ -79,7 +79,7 @@ public class Usage {
 		int maxLength = maxKey.isPresent() ? maxKey.get().length() + keyTable.get(maxKey.get()).size() : 0;
 		maxLength += 2;
 		for (String key : keyList) {
-			result += "\n";
+			result += System.getProperty("line.separator");
 			Key k = keyTable.get(key);
 			if (k instanceof KeyValue) {
 				KeyValue kv = (KeyValue)k;

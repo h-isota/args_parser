@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package isota.util.args_parser;
 
@@ -32,10 +32,11 @@ public class SampleTest {
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
 		System.setErr(new PrintStream(out));
 		Sample.main(new String[] { "-h" });
-		assertEquals("java isota.util.args_parser.Sample [-h] [-d dir] -f file\n"
-				+ "  -h      : show help\n"
-				+ "  -d dir  : set directory\n"
-				+ "  -f file : set file\n"
+		String lineCd = System.getProperty("line.separator");
+		assertEquals("java isota.util.args_parser.Sample [-h] [-d dir] -f file" + lineCd
+				+ "  -h      : show help" + lineCd
+				+ "  -d dir  : set directory" + lineCd
+				+ "  -f file : set file" + lineCd
 				+ "", out.toString());
 	}
 
